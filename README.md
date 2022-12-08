@@ -27,9 +27,8 @@ Users should be able to:
 
 ### Screenshot
 
-![desktop version, 2560x1440](./screenshots/screen_desktop2560px.png)
-![mobile version, 375x812](./screenshots/screen_mobile_375px.png)
-
+[desktop version, 2560x1440](./screenshots/screen_desktop2560px.png)
+[mobile version, 375x812](./screenshots/screen_mobile_375px.png)
 
 ### Links
 
@@ -46,7 +45,6 @@ Users should be able to:
 - CSS Grid
 - Desktop-first workflow
 - Sassy CSS (SCSS)
-
 
 ### What I learned
 
