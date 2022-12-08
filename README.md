@@ -27,13 +27,13 @@ Users should be able to:
 
 ### Screenshot
 
-[desktop version, 2560x1440](./screenshots/screen_desktop2560px.png)
-[mobile version, 375x812](./screenshots/screen_mobile_375px.png)
+![desktop version, 2560x1440](./screenshots/screen_desktop2560px.png)
+![mobile version, 375x812](./screenshots/screen_mobile_375px.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Solution @Github](https://github.com/pengpongpong/Product-preview-card-component)
+- Live Site URL: [Github pages - live preview](https://pengpongpong.github.io/Product-preview-card-component/)
 
 ## My process
 
