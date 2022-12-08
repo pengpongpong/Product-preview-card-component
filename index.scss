@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    // border: 1px solid black
+}
+
+$gray: gray;
+$green: hsl(158, 36%, 37%);
+$darkgreen: #013220;
+$white: hsl(0, 0%, 100%);
+$cream: hsl(30, 38%, 92%);
+
+$text: "Montserrat", sans-serif;
+$title: 'Fraunces', serif;
+
+$title-size: calc(1rem + 1.6vw);
+$title-height: calc(1rem + 1.6vw);
+$text-size: calc(.5rem + .6vw);
+$text-height : calc(1rem + .8vw);
+
+$title-size-mid: calc(1rem + 3vw);
+$title-height-mid: calc(1rem + 3vw);
+$text-size-mid: calc(.5rem + 1vw);
+$text-height-mid : calc(1rem + 1vw);
+
+$title-size-small: calc(1rem + 4vw);
+$title-height-small: calc(1rem + 4vw);
+$text-size-small: calc(.5rem + 1.6vw);
+$text-height-small : calc(1rem + 1.6vw);
+
+$normal-screen: 1920px;
+$mid-screen: 1500px;
+$small-screen: 430px;
+
+body {
+    display: grid;
+    place-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: $cream;
+}
+
+.overview {
+    width: 40vw;
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+    overflow: hidden;
+    @media (max-width: $normal-screen) {
+        width: 45vw;
+    }
+    @media (max-width: $mid-screen) {
+        flex-direction: column;
+        width: 75vw;
+        height: 90vh;
+    }
+    @media (max-width: $small-screen) {
+        width: 90vw;
+        height: 75vh;
+    }
+}
+
+.product_img {
+    width: 50%; 
+    .image {
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+
+        @media (max-width: $mid-screen) {
+            object-fit: cover;
+        }
+        @media (max-width: $small-screen) {
+            object-fit: fill;
+        }
+    }
+    @media (max-width: $mid-screen) {
+        width: auto;
+        height: 40vh;
+    }
+    @media (max-width: $small-screen) {
+        height: 30vh;
+    }
+}
+
+.product {
+    width: 50%;
+    background-color: $white;
+    padding: 3rem;
+
+    @media (max-width: $mid-screen) {
+        width: 100%;
+        height: 50vh;
+    }
+    @media (max-width: $small-screen) {
+        height: 45vh;
+        padding: 1.3rem;
+    }
+
+    .categorie {
+        font-family: $text;
+        font-size: $text-size;
+        color: $gray;
+        text-transform: uppercase;
+        letter-spacing: .5rem;
+        margin-bottom: 2rem;
+        @media (max-width: $mid-screen) {
+            font-size: $text-size-mid;
+            line-height: $text-height-mid;
+        }
+        @media (max-width: $small-screen) {
+            font-size: $text-size-small;
+            letter-spacing: .2rem;
+            line-height: $text-height-small;
+            margin-bottom: .5rem;
+        }
+    }
+
+    .product_name {
+        font-family: $title;
+        font-size: $title-size;
+        line-height: $title-height;
+        margin-bottom: 2.5rem;
+        @media (max-width: $mid-screen) {
+            font-size: $title-size-mid;
+            line-height: $title-height-mid;
+        }
+        @media (max-width: $small-screen) {
+            font-size: $title-size-small;
+            line-height: $title-height-small;
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    .description {
+        font-family: $text;
+        font-size: $text-size;
+        line-height: $text-height;
+        color: $gray;
+        @media (max-width: $mid-screen) {
+            font-size: $text-size-mid;
+            line-height: $text-height-mid;
+        }
+        @media (max-width: $small-screen) {
+            font-size: $text-size-small;
+            line-height: $text-height-small;
+        }
+    }   
+}
+
+.price_holder {
+    width: 85%;
+    padding: 3.5rem 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: $mid-screen) {
+        padding: 2rem 0;
+        width: 40%;
+    }
+    @media (max-width: $small-screen) {
+        padding: 1.5rem 0;
+        width: 65%;
+    }
+
+    .price {
+        font-family: $title;
+        font-size: $title-size;
+        color: $green;
+        padding-right: .5rem;
+        @media (max-width: $mid-screen) {
+            font-size: $title-size-mid;
+            line-height: $title-height-mid;
+        }
+        @media (max-width: $small-screen) {
+            font-size: $title-size-small;
+            line-height: $title-height-small;
+        }
+    }
+
+    .old_price {
+        font-family: $text;
+        font-size: $text-size;
+        color: $gray;
+        @media (max-width: $mid-screen) {
+            font-size: $text-size-mid;
+            line-height: $text-height-mid;
+        }
+        @media (max-width: $small-screen) {
+            font-size: $text-size-small;
+            line-height: $text-height-small;
+        }
+    }
+}
+
+.buy_button {
+    width: 100%;
+    height: 6vh;
+    font-family: $text;
+    font-size: $text-size;
+    color: $white;
+    background-color: $green;
+    border-radius: 10px;
+    border: 1px solid $green;
+    @media (max-width: $mid-screen) {
+        font-size: $text-size-mid;
+        line-height: $text-height-mid;
+    }
+    @media (max-width: $small-screen) {
+        font-size: $text-size-small;
+        line-height: $text-height-small;
+    }
+    &:hover {
+        background-color: $darkgreen;
+        cursor: pointer;
+    }
+    
+    i {
+        padding-right: 1rem;
+    }
+}
